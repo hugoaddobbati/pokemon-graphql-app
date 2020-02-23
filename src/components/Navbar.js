@@ -22,6 +22,7 @@ const useStyles = makeStyles(theme => ({
 
 const Navbar = (props) => {
     const [clicked, setClicked] = useState(false);
+    //since the navbar doesnt re-render, the <Redirect> tag would stay rendered and that would cause problems, so after 10ms we make it disappear
     const handleClick = (event) => {
       event.preventDefault();
       setClicked(true);
