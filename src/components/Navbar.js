@@ -26,7 +26,7 @@ const Navbar = (props) => {
     const handleClick = (event) => {
       event.preventDefault();
       setClicked(true);
-      const timeout = setTimeout(() => {setClicked(false)}, 10)
+      setTimeout(() => {setClicked(false)}, 10)
     }
     const classes = useStyles();
     return(

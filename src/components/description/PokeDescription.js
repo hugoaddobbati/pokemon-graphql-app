@@ -1,7 +1,7 @@
 import React from 'react'
 import { useParams} from "react-router-dom";
 import {useQuery} from '@apollo/react-hooks'
-import {getPokemonQuery} from '../queries/queries'
+import {getPokemonQuery} from '../../queries/queries'
 import {makeStyles} from '@material-ui/styles'
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -31,7 +31,6 @@ const useStyles = makeStyles({
   });
 
 
-
 const PokeDescription = (props) => {
     const classes = useStyles();
     let {name} = useParams();
@@ -46,14 +45,15 @@ const PokeDescription = (props) => {
     const pokeInfo = data?.pokemon;
     let nameURL = ""
     if(data?.pokemon){
-        if(data.pokemon.name == "Mr. Mime") nameURL = "mr-mime"
-        else if(data.pokemon.name == "Farfetch'd") nameURL = 'farfetchd'
+        if(data.pokemon.name === "Mr. Mime") nameURL = "mr-mime"
+        else if(data.pokemon.name === "Farfetch'd") nameURL = 'farfetchd'
         else{
             nameURL = data.pokemon.name
         }
     }
 
     return (<div className={classes.container}>
+        {error ? console.log(error) : <div></div>}
         {loading 
             ?
             (<Loader type="TailSpin" color="#6200EE" height={80} width={80} style={{marginTop: "50px"}}/>)

@@ -29,10 +29,10 @@ const PokeCard = (props) => {
       }
 
     let {name, nameURL} = props;
-    if(nameURL == "Mr. Mime"){
+    if(nameURL === "Mr. Mime"){
         nameURL = "mr-mime"
     }
-    if(nameURL == "Farfetch'd"){
+    if(nameURL === "Farfetch'd"){
         nameURL = "farfetchd"
     }
 

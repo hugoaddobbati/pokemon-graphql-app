@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { graphql } from 'react-apollo';
 import {getPokemonsQuery} from '../queries/queries'
-import {useEffect} from 'react';
 import Loader from 'react-loader-spinner'
 import PokeCard from './PokeCard'
 

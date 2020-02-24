@@ -4,7 +4,7 @@ import PokeList from './components/PokeList'
 import ApolloClient from 'apollo-boost'
 import {ApolloProvider} from 'react-apollo'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import PokeDescription from './components/PokeDescription'
+import PokeDescription from './components/description/PokeDescription'
 const client = new ApolloClient({
   uri: 'https://graphql-pokemon.now.sh/'
 })
